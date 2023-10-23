@@ -177,4 +177,12 @@ jobs:
           echo "::warning file=starter.yml,line=171,col=19,endColumn=22::Writing a warning"
           echo "::endgroup::"
           
-  
+    label_issues:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues'
+    
+    steps:
+      - uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
+        with:
+          add-labels: documentation
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
