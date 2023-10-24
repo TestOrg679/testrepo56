@@ -1,0 +1,15 @@
+name: calling container action
+on: workflow_dispatch
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.3.0
+      - name: run container action
+        id: hello-action
+        uses: ./hello-world-docker-action1
+        with:
+          who-to-greet: 'Demouser'
+      - name: output time in container
+        run: echo "time was ${{steps.hello-action.outputs.time}}"
