@@ -4,7 +4,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo '###Hello word :rocket:' >> $GITHUB_STEP_SUMMARY
+      - run: echo '### Hello word :rocket:' >> $GITHUB_STEP_SUMMARY
       - run: echo '### love this feature :medal_sports:' >> $GITHUB_STEP_SUMMARY
       - run: echo '<h1> great feature </h>' >> $GITHUB_STEP_SUMMARY
   job2:
