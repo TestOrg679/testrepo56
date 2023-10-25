@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: write summary action
-        uses: actions/github-script@v.6.1.0
+        uses: actions/github-script@v6.1.0
         with:
           script: |
             await core.summary
