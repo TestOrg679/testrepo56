@@ -4,7 +4,7 @@ on:
  
 jobs:
   job1:
-   runs-on: [self-hosted]
+   runs-on: self-hosted
    steps:
    - run: echo "Hello from self-hosted runner"
      shell: cmd
